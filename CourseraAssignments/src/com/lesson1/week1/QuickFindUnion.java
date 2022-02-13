@@ -2,7 +2,7 @@ package com.lesson1.week1;
 
 public class QuickFindUnion {
 
-  private int [] id;
+  private int [] id; // elements belonging to same connected component have same id[i] value
 
   public QuickFindUnion(int N){
      id = new int [N] ;
