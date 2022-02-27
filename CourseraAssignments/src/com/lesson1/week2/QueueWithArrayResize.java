@@ -1,7 +1,5 @@
 package com.lesson1.week2;
 
-import java.lang.reflect.Array;
-
 public class QueueWithArrayResize<T> {
 
   private T [] data ;
@@ -11,7 +9,7 @@ public class QueueWithArrayResize<T> {
 
   public QueueWithArrayResize(int size) {
     this.front = this.rear = -1;
-    this.data = (T[]) Array.newInstance(QueueWithArrayResize.class , size);
+    this.data = (T[]) new Object [size];
     this.size = size;
   }
 
@@ -39,7 +37,8 @@ public class QueueWithArrayResize<T> {
   public void resizeOnEnqueue(){
 
     int newSize = 2 * size;
-    T [] resizedArray = (T[]) Array.newInstance(QueueWithArrayResize.class , newSize);
+
+    T [] resizedArray  = (T[]) new Object [newSize] ;
 
     int j = 0 ;
     for(int i = front ; i <= rear ; i++)
@@ -55,7 +54,8 @@ public class QueueWithArrayResize<T> {
   public void resizeOnDequeue(){
 
     int newSize = size/2;
-    T [] resizedArray = (T[]) Array.newInstance(QueueWithArrayResize.class , newSize);
+
+    T [] resizedArray  = (T[]) new Object [newSize] ;
 
     int j = 0 ;
     for(int i = front ; i <= rear ; i++)
