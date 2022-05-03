@@ -7,6 +7,9 @@ import java.util.Arrays;
   1. Pass through array merging sub-arrays of size 1
   2. Repeat step 1 for sub-arrays of size 2,4,8,16 etc.
 
+  No of pssses - first for loop : log n
+  Time complexity : n log n
+
 
 
  */
